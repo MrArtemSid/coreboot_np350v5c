@@ -1,0 +1,36 @@
+if BOARD_SAMSUNG_ELECTRONICS_CO.__LTD_350V5C/351V5C/3540VC/3440VC
+
+config BOARD_SPECIFIC_OPTIONS
+	def_bool y
+	select BOARD_ROMSIZE_KB_6144
+	select EC_ACPI
+	select HAVE_ACPI_RESUME
+	select HAVE_ACPI_TABLES
+	select INTEL_INT15
+	select MAINBOARD_HAS_LIBGFXINIT # FIXME: check this
+	select NORTHBRIDGE_INTEL_SANDYBRIDGE
+	select SERIRQ_CONTINUOUS_MODE
+	select SOUTHBRIDGE_INTEL_C216
+	select SYSTEM_TYPE_LAPTOP
+	select USE_NATIVE_RAMINIT
+
+config MAINBOARD_DIR
+	string
+	default "samsung_electronics_co.__ltd/350v5c/351v5c/3540vc/3440vc"
+
+config MAINBOARD_PART_NUMBER
+	string
+	default "350V5C/351V5C/3540VC/3440VC"
+
+config VGA_BIOS_ID
+	string
+	default "8086,0166"
+
+config DRAM_RESET_GATE_GPIO # FIXME: check this
+	int
+	default 60
+
+config USBDEBUG_HCD_INDEX # FIXME: check this
+	int
+	default 2
+endif

@@ -1,0 +1,9 @@
+sudo ./autoport --input_log=logs --make_logs --coreboot_dir=../..
+[sudo] пароль для user:
+WARNING: The following tool MAY cause your system to hang when it attempts to probe for graphics registers.  Having the graphics registers will help create a better port. Should autoport probe these registers?. (y/yes/n/no) Default:y
+
+PCH sound card is card0
+Unknown PCI device 1002:682f, assuming removable
+Unknown PCI device 10ec:8168, assuming removable
+Unknown PCI device 168c:0032, assuming removable
+
