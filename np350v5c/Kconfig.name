@@ -1,0 +1,2 @@
+config BOARD_SAMSUNG_NP350V5C
+	bool "NP350V5C"
