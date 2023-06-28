@@ -8,7 +8,6 @@ use HW.GFX.GMA.Display_Probing;
 
 private package GMA.Mainboard is
 
-   -- FIXME: check this
    ports : constant Port_List :=
      (DP1,
       DP2,
@@ -18,6 +17,6 @@ private package GMA.Mainboard is
       HDMI3,
       Analog,
       LVDS,
-      eDP);
+      others => Disabled);
 
 end GMA.Mainboard;
