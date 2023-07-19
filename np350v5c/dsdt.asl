@@ -27,4 +27,6 @@ DefinitionBlock(
 		#include <drivers/intel/gma/acpi/default_brightness_levels.asl>
 		#include <southbridge/intel/bd82x6x/acpi/pch.asl>
 	}
+
+	#include "acpi/mainboard.asl"
 }

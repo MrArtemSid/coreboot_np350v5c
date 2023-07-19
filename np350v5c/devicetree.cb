@@ -73,6 +73,10 @@ chip northbridge/intel/sandybridge # FIXME: GPU registers may not always apply.
 			end
 			device ref lpc on # LPC bridge
 				subsystemid 0x144d 0xc0d8
+				chip ec/compal/ene932
+					device pnp ff.1 on # dummy address
+					end
+				end
 			end
 			device ref sata1 on # SATA Controller 1
 				subsystemid 0x144d 0xc0d8
