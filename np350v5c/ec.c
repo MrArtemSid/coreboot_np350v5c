@@ -3,6 +3,7 @@
 #include <types.h>
 #include <console/console.h>
 #include <device/device.h>
+#include <ec/acpi/ec.h>
 #include <ec/compal/ene932/ec.h>
 #include "ec.h"
 
@@ -12,6 +13,12 @@ void ec_init(void)
 
 	/* Clean up the buffers. We don't know the initial condition. */
 	kbc_cleanup_buffers();
+
+	/* Enable TouchPad */
+	ec_write(0xa1, 0x4);
+
+	/* Enable Wi-Fi */
+	ec_write(0xbb, 0x0f);
 
 	/* FIXME: Need to recheck if laptop needs that */
 	/* US Keyboard */
