@@ -3,6 +3,19 @@
 #include <mainboard/samsung/np350v5c/onboard.h>
 
 /* FIXME: Recheck everything  */
+Scope (\_GPE) {
+	Method(_L1F, 0x0, NotSerialized)
+	{
+		/*
+		 * Invert the interrupt level bit for the lid GPIO
+		 * so we don't get another _SB.LID0 until the state
+		 * changes again. GIV1 is the interrupt level control
+		 * register for GPIO bits 15:8
+		 */
+		GIV1 ^= 0x80
+		Notify(\_SB.LID0,0x80)
+	}
+}
 
 Scope (\_SB) {
 	Device (LID0)
