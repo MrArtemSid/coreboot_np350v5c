@@ -19,6 +19,9 @@ config BOARD_SPECIFIC_OPTIONS
 	select SYSTEM_TYPE_LAPTOP
 	select USE_NATIVE_RAMINIT
 
+config CBFS_SIZE
+	default 0x480000
+
 config MAINBOARD_DIR
 	string
 	default "samsung/np350v5c"
